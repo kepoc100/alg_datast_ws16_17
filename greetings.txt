@@ -1,0 +1,9 @@
+Germany Hallo
+France Bonjour
+England Hello
+USA Hello
+Spain Hola
+Portugal Oi
+Japan Ko ni chi wa
+China Ni hao
+Russia Privet
