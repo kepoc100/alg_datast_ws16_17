@@ -45,7 +45,7 @@ def sum_numbers_recursive(my_list):
 		return 0
 	return my_list[len(my_list)-1] + sum_numbers_recursive(my_list[:len(my_list)-1])
 
-print sum_numbers_recursive([1,2,3,4,5,6])
+#print sum_numbers_recursive([1,2,3,4,5,6])
 
 # write a non recursive function which reverses a list
 
@@ -57,7 +57,7 @@ def non_recursive(my_list):
 		length = length - 1	
 	return recursive_list
 		
-print non_recursive([1,2,3,4,5,6,7])
+#print non_recursive([1,2,3,4,5,6,7])
 
 def recursive_list(length,recur,my_list):
 	length = len(my_list)
@@ -68,5 +68,12 @@ def recursive_list(length,recur,my_list):
 		return recur
 	
 	
-print recursive_list(0,[],[1,2,3])
+def recursive_liste(recursive,liste):
+	if len(liste) != 0:
+		recursive.append(liste[len(liste)-1])
+		del liste[-1]
+		recursive_liste(recursive,liste)
+	return recursive
 	
+	
+print recursive_liste([],[1,2,3,4,5,6,7])
