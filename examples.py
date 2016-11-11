@@ -37,7 +37,7 @@ def index(gesucht,list):
 	end_time=time.clock()
 	a_time=end_time-start_time
 	return index ,a_time
-	
+
 liste1 = []
 for x in range(100000000):
 	liste1.append(0)
@@ -51,3 +51,58 @@ print "implemented SUM in C", sum, a_time
 print "selbstprogrammiert SUM: ",sum_1(liste1)	
 print "selbstprogrammiert FIND FIRST: ", find_first_occ(1,liste1)
 print "implemented FIND FIRST in C ", index(1,liste1)
+
+
+# 1) write a non recursive function which takes two numbers x,n >= 0 as
+# parameters and returns x hoch n
+
+# 2) write a recursive function which takes two numbers x,n >= 0 as
+# parameters and returns x hoch n
+
+# compare the efficiency of those two functions
+import math
+
+def power_mal(x,y):
+		if x and y >= 0:
+			return x**y
+
+def power(x,y):
+	start_time=time.clock()
+	p = 1
+	for i in range(y):
+		p = p * x
+	end_time=time.clock()
+	a_time=end_time-start_time
+	return p, a_time
+			
+def recursive_power(x,y):
+	if y == 0:
+		return 1		
+	return x * recursive_power(x,y-1)
+	
+# x to the power of y
+print power(3,4)
+
+start_time=time.clock()
+rp = recursive_power(2,4)
+end_time=time.clock()
+a_time=end_time-start_time
+print rp, a_time
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
