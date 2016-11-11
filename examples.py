@@ -81,7 +81,7 @@ def recursive_power(x,y):
 	return x * recursive_power(x,y-1)
 	
 # x to the power of y
-print power(3,4)
+print power(5000,5000)
 
 start_time=time.clock()
 rp = recursive_power(2,4)
