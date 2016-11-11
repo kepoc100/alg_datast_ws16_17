@@ -1,6 +1,8 @@
 x  = 1
 # x is a reference to an object, which contains 1
-# Scope: range of validity of identifiers. The resolution to an identifier x is done according to LEGB Rule
+# Scope: range of validity of identifiers. The resolution to an identifier 
+# x is done according to LEGB Rule
+
 # Local, Enclosing, Global, Built-In
 
 # Local
