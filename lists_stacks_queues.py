@@ -6,8 +6,8 @@ class PyList:
 		self._size = size
 		self._num_items = 0
 		for elem in content:
-			self._items.append2(elem)
-	"""		
+			self._items.append(elem)
+		
 	def __getitem__(self,index):
 		if index >= 0 and index < self._num_items:
 			return self._items[index]
@@ -18,7 +18,7 @@ class PyList:
 			self._items[index] = val
 			return 
 		raise IndexError("index out of range")
-	"""
+	
 	def __makeroom(self):
 		newlen = (self._size // 4) + self._size + 1
 		newlst = [None] + newlen
@@ -27,15 +27,29 @@ class PyList:
 		self._items = newlst
 		self._size = newlen
 	
-	def append2(self, item):
+	def append(self, item):
 		if self._num_items == self._size:
 			self.__makeroom()
 		self._items[self._num_items] = item
 		self._num_items += 1
 		print self._items
+
+	def __contains__(self, x):
+		for item in range(self._num_items):
+			if self._items[item] == x:
+				return True
+		return False
+		
+	def __len__(self):
+		print self._num_items
+		return self._num_items
+		
+	#def insert(self, index, element):
+		
 		
 
-		
-	
 lst = PyList([1,2,3])
 lst.append(3)
+#lst.__getitem__(2)
+#print lst.__contains__(3)
+print lst.__len__()
