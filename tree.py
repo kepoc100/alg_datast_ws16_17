@@ -23,13 +23,28 @@ class bst:
 					root.right = node
 				else:
 					self.binary_insert(root.right, node)
-	
-	def delete(self,data,find):
-		self.root = root
-		if root:
-			print(root.data)
-			self.preorder(root.left)
-			self.preorder(root.right))
+
+	def delete(self,node,data):
+		if node is None:
+			return None
+
+
+		if data < self.node.data:
+			node.left = self.delete(node.left, data)
+		elif data > node.data:
+			node.right = self.delete(node.right, data)
+		else:
+			if node.left is None and node.right is None:
+				del node
+			if self.node.left == None:
+				temp = self.node.right
+				del self.node
+				return  temp
+			elif self.node.right == None:
+				temp = self.node.left
+				del node
+				return temp
+
 			
 	def preorder(self,root):
 		self.root = root
@@ -54,10 +69,15 @@ class bst:
 
 r = bst(3)
 r.binary_insert(r, bst(7))
+r.binary_insert(r, bst(5))
+r.binary_insert(r, bst(1))
+r.binary_insert(r, bst(0))
+
+print("preorder")
 r.preorder(r)
-print("")
-r.postorder(r)
-print("")
-r.inorder(r)
-r.delete(7)
-r.inorder(r)
+#r.postorder(r)
+#r.inorder(r)
+
+r.delete(r,7)
+print("preorder")
+r.preorder(r)

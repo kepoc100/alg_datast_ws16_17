@@ -60,3 +60,15 @@ bst.binary_insert(root,10)
 bst.binary_insert(root,7)
 bst.postorder(root)
 
+	"""
+	def delete(self,data,find):
+		self.data = data
+		self.find = find
+		if self.root:
+			if root.data == find:
+				root.data = None
+				print("found"+self.find)
+				
+			self.preorder(root.left)
+			self.preorder(root.right)
+	""" 
